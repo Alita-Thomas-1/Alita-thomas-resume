@@ -1,0 +1,639 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Alita Thomas - Product Designer Portfolio" />
+<title>Alita Thomas | Product Designer</title>
+
+<style>
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #111827;
+    --text-secondary: #4b5563;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border: #e5e7eb;
+    --max-width: 1100px;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-bottom: 0.75rem;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: #f3f4f6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(250,250,250,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.headshot-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 3px dashed #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.subtitle {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.25rem;
+}
+
+.bio {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+    background: var(--surface);
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.project-card {
+    min-height: 220px;
+}
+
+.project-thumbnail {
+    height: 160px;
+    background: #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.resume-banner {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
+    text-align: center;
+    border-radius: var(--radius);
+    padding: 3rem;
+}
+
+.resume-banner p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1.5rem;
+}
+
+.testimonial {
+    font-style: italic;
+}
+
+.blog-post {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-box {
+    text-align: center;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav aria-label="Primary Navigation">
+            <div class="logo">Alita Thomas</div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#what-i-do">What I Do</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+        <div class="container">
+
+            <div
+                class="headshot-placeholder"
+                aria-label="Placeholder for Alita Thomas headshot"
+            >
+                Headshot
+            </div>
+
+            <h1>Alita Thomas</h1>
+
+            <p class="subtitle">
+                I'm a Product Designer that crafts thoughtful, user-centered
+                digital experiences through research, strategy, and visual
+                design.
+            </p>
+
+            <div class="bio">
+                <p>
+                    Hi, I'm Alita.
+                </p>
+
+                <p>
+                    I'm a product designer passionate about creating accessible
+                    and intuitive experiences that solve real user problems.
+                </p>
+
+                <p>
+                    My work combines UX research, interaction design, and visual
+                    storytelling to turn ideas into products people love using.
+                </p>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#" class="btn btn-secondary">
+                    Download Resume
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESUME CTA -->
+    <section>
+        <div class="container">
+            <div class="resume-banner">
+                <h2>Currently Seeking Product Design Internships</h2>
+
+                <p>
+                    Interested in product design, UX research, accessibility,
+                    and creating experiences that solve real user problems.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="what-i-do">
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>What I Do</h2>
+
+                <p>
+                    I enjoy solving complex problems through thoughtful design,
+                    research, and collaboration.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card">
+                    <h3>🧠 UX Research</h3>
+                    <p>
+                        Conducting interviews, usability testing, and research
+                        to uncover user needs and guide design decisions.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>🎨 Product Design</h3>
+                    <p>
+                        Designing intuitive digital products from concept to
+                        polished interface.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>⚡ Prototyping</h3>
+                    <p>
+                        Creating interactive prototypes that communicate ideas
+                        and validate assumptions early.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>Skills & Tools</h2>
+            </div>
+
+            <div class="grid grid-3">
+
+                <div class="card">
+                    <h3>Design</h3>
+                    <p>
+                        UX Design<br>
+                        UI Design<br>
+                        Interaction Design<br>
+                        Design Systems<br>
+                        Accessibility
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Research</h3>
+                    <p>
+                        User Interviews<br>
+                        Usability Testing<br>
+                        Competitive Analysis<br>
+                        Surveys
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Tools</h3>
+                    <p>
+                        Figma<br>
+                        FigJam<br>
+                        Adobe Creative Suite<br>
+                        Miro<br>
+                        Notion
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>Featured Projects</h2>
+
+                <p>
+                    A selection of projects showcasing my design process,
+                    research, and problem-solving approach.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card project-card">
+                    <div class="project-thumbnail"></div>
+                    <h3>Project One</h3>
+                    <p>
+                        Product redesign focused on improving onboarding and
+                        usability.
+                    </p>
+                </article>
+
+                <article class="card project-card">
+                    <div class="project-thumbnail"></div>
+                    <h3>Project Two</h3>
+                    <p>
+                        Research-driven mobile experience designed around user
+                        insights.
+                    </p>
+                </article>
+
+                <article class="card project-card">
+                    <div class="project-thumbnail"></div>
+                    <h3>Project Three</h3>
+                    <p>
+                        End-to-end product design project from discovery to
+                        final prototype.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>Experience</h2>
+
+                <p>
+                    Co-op placements, internships, and opportunities where I've
+                    collaborated with teams to build meaningful products.
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+
+                <article class="card">
+                    <h3>Product Design Intern</h3>
+                    <p>
+                        Company Name<br>
+                        Jan 2027 – Apr 2027
+                    </p>
+
+                    <p>
+                        Conducted research, created wireframes, and collaborated
+                        with stakeholders to improve user experiences.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>UX Designer Co-op</h3>
+                    <p>
+                        Company Name<br>
+                        May 2026 – Aug 2026
+                    </p>
+
+                    <p>
+                        Supported product initiatives through user research,
+                        design iteration, and prototype development.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>Testimonials</h2>
+            </div>
+
+            <div class="grid grid-2">
+
+                <article class="card testimonial">
+                    “Alita consistently demonstrated strong design thinking and
+                    collaboration skills.”
+                </article>
+
+                <article class="card testimonial">
+                    “Her ability to connect user research to practical design
+                    decisions was impressive.”
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+        <div class="container">
+
+            <div class="section-intro">
+                <h2>Writing & Reflections</h2>
+
+                <p>
+                    Thoughts on design, co-op experiences, projects, and
+                    lessons learned along the way.
+                </p>
+            </div>
+
+            <div class="grid">
+
+                <article class="blog-post">
+                    <h3>What I Learned During My First Co-op</h3>
+                    <p>
+                        Reflections on collaboration, growth, and working in a
+                        professional product team.
+                    </p>
+                </article>
+
+                <article class="blog-post">
+                    <h3>Designing Under Real-World Constraints</h3>
+                    <p>
+                        Lessons from balancing user needs, deadlines, and
+                        business requirements.
+                    </p>
+                </article>
+
+                <article class="blog-post">
+                    <h3>How User Testing Changed My Design Process</h3>
+                    <p>
+                        Key insights gained through usability testing and
+                        iterative design.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+
+            <div class="card contact-box">
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    Interested in working together or discussing internship
+                    opportunities?
+                </p>
+
+                <br>
+
+                <a href="mailto:hello@alitathomas.com"
+                   class="btn btn-primary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 Alita Thomas · Product Designer
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+
